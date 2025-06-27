@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use PhpParser\Builder\Use_;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,41 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
+
+
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//1st way to add route
+Route::get('/home', function () {
+    return view('home');
+});
+
+
+//2nd way 
+Route::view('/home','home');
+
+Route::get('/about/{name}', function ($name) {
+    echo $name;
+    return view('about');
+});
+
+
+//calling controller
+Route::get('/user', [UserController::class, 'getUser']);
+
+
+
+Route::get('/username/{name}', [UserController::class, 'getUserName']);
+
+
+//blade template calling
+Route::get('/', [UserController::class, 'show']);
+
+
+Route::get('/', [HomeController::class, 'Opration']);
