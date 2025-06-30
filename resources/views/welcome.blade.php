@@ -52,3 +52,14 @@
     <main>
         <p>Main content goes here...</p>
     </main>
+
+<hr>
+    <!-- //reuse component  -->
+
+    <x-message-banner/>
+
+    <x-message-banner type="success" message="Operation successful!" />
+    <x-message-banner type="danger" message="error Message" />
+
+
+    <hr>
