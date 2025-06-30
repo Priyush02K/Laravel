@@ -15,6 +15,7 @@ use PhpParser\Builder\Use_;
 */
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FromHandling;
 
 
 
@@ -51,3 +52,9 @@ Route::get('/', [UserController::class, 'show']);
 
 
 Route::get('/', [HomeController::class, 'Opration']);
+
+
+
+//from handling
+Route::view('user-from','user-from');
+Route::post('addUser',[FromHandling::class, 'addUser']);
