@@ -58,3 +58,7 @@ Route::get('/', [HomeController::class, 'Opration']);
 //from handling
 Route::view('user-from','user-from');
 Route::post('addUser',[FromHandling::class, 'addUser']);
+
+
+Route::view('user-from-two','user-from-two');
+Route::post('addUser1',[FromHandling::class, 'addUser1']);  // first for action ="" second for controller function name

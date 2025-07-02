@@ -19,4 +19,24 @@ class FromHandling extends Controller
         echo $request->city;
         echo "<br/>";
     }
+
+
+
+       function addUser1(Request   $request){
+        // echo "add user function called";
+        // return $request; 
+        print_r($request->skill) ;
+        echo "<br/>";
+
+        echo $request->gender;
+        echo "<br/>";
+
+        echo $request->country;
+        echo "<br/>";
+
+        echo $request->age;
+        echo "<br/>";
+    }
+
+
 }
