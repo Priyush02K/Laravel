@@ -62,3 +62,13 @@ Route::post('addUser',[FromHandling::class, 'addUser']);
 
 Route::view('user-from-two','user-from-two');
 Route::post('addUser1',[FromHandling::class, 'addUser1']);  // first for action ="" second for controller function name
+
+
+Route::view('user-from-three','user-from-three');
+Route::post('addUser3',[FromHandling::class, 'addUser3']); 
+
+
+Route::get('/uppercase-form', [FromHandling::class, 'showForm']);
+Route::post('/submit-uppercase', [FromHandling::class, 'handleForm']);
+
+
