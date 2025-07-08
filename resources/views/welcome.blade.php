@@ -64,6 +64,23 @@
 
     <hr>
 
-    <h2>From Handling </h2>
+    <h2>From Handling + Validation </h2>
+    <li><a href="/user-from">user-from</a></li>
+    <li><a href="/user-from-two">user-from-two</a></li>
+    <li><a href="/user-from-three">user-from-three</a></li>    
 
     
+    <hr>
+
+    <h2>customs Rule </h2>
+    <li><a href="/uppercase-form">Rule</a></li>
+
+    <hr>
+     <h2> URL generation  </h2>
+     <div>
+        {{URL::current()}}
+     </div>
+
+
+    <hr>
+    <h2>Named Routes </h2>

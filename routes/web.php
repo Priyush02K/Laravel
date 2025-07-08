@@ -72,3 +72,13 @@ Route::get('/uppercase-form', [FromHandling::class, 'showForm']);
 Route::post('/submit-uppercase', [FromHandling::class, 'handleForm']);
 
 
+//name route 
+
+Route::view('user-from','user-from')->name('ur');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+Route::get('/user/{id}', [UserController::class, 'show'])->name('user.profile');
