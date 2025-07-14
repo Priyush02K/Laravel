@@ -15,5 +15,6 @@ class HomeController extends Controller
         $role = 'admin';
 
         return view('welcome', compact('name','age', 'users', 'role'));
+        
     }
 }

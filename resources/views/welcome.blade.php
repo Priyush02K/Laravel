@@ -84,3 +84,37 @@
 
     <hr>
     <h2>Named Routes </h2>
+     <li><a href="user">user-from</a></li>
+
+    
+    
+    <hr>
+    <h2>Route Group  </h2>
+    <li><a href="admin/dashboard">Dashboard</a></li>
+    <li><a href="admin/dashboard">Settings</a></li>
+    <hr>
+
+    <h2> Group Controller </h2>
+    <li><a href="index">index</a></li>
+    <li><a href="add">add</a></li>
+    <li><a href="settings">settings</a></li>
+    <li><a href="about/{name}">about</a></li>
+    <hr>
+
+
+
+    <h2>Middleware </h2>
+
+     <li><a href="office">office</a></li>
+ 
+
+    <hr>
+
+
+
+        <h2>Middleware </h2>
+
+     <li><a href="office">office</a></li>
+ 
+
+    <hr>

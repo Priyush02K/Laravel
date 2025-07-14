@@ -35,4 +35,23 @@ class UserController extends Controller
     }
 
 
+    public function index()
+    {
+        return "User index";
+    }
+
+       public function add()
+    {
+        return "User add";
+    }
+
+    public function settings()
+    {
+        return "User settings";
+    }
+
+       public function about($name)
+    {
+        return $name;
+    }
 }

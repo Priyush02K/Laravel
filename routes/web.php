@@ -16,6 +16,8 @@ use PhpParser\Builder\Use_;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FromHandling;
+use App\Http\Controllers\AdminController;
+
 
 
 
@@ -76,9 +78,40 @@ Route::post('/submit-uppercase', [FromHandling::class, 'handleForm']);
 
 Route::view('user-from','user-from')->name('ur');
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 Route::get('/user/{id}', [UserController::class, 'show'])->name('user.profile');
+
+
+//groping router
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/settings', [AdminController::class, 'settings'])->name('admin.settings');
+});
+
+
+//groping controller
+// Route::get('index',[UserController::class, 'index']);
+// Route::get('add',[UserController::class, 'add']);
+// Route::get('delete',[UserController::class, 'delete']);
+
+Route::controller(UserController::class)->group(function(){
+    Route::get('index', 'index');
+    Route::get('add', 'add');
+    Route::get('settings', 'settings');
+    Route::get('about/{name}', 'about');
+
+});
+
+
+// Route::get('/admin/dashboard', function () {
+//     return view('admin.dashboard');
+// })->middleware('admin');
+
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+})->middleware('admin');
+
+Route::get('/office', function () {
+    return '🏢 Welcome to the office!';
+})->middleware('business.hours');
