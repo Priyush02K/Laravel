@@ -108,13 +108,7 @@
      <li><a href="office">office</a></li>
  
 
-    <hr>
-
-
-
-        <h2>Middleware </h2>
-
+<hr>
+     <h2>Middleware </h2>
      <li><a href="office">office</a></li>
- 
-
-    <hr>
+<hr>

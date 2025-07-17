@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -53,5 +53,13 @@ class UserController extends Controller
        public function about($name)
     {
         return $name;
+    }
+
+    public function database()
+    {
+        $user = DB::select('select * from users');
+        $student = DB::select('select * from student');
+
+        return view('database',['users'=> $user]);
     }
 }

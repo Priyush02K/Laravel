@@ -17,6 +17,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FromHandling;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\StudentController;
 
 
 
@@ -115,3 +116,10 @@ Route::get('/admin/dashboard', function () {
 Route::get('/office', function () {
     return '🏢 Welcome to the office!';
 })->middleware('business.hours');
+
+
+//mysql
+Route::get('mysql-conn', [UserController::class ,'database']);
+Route::get('/database', action: [UserController::class, 'database']);
+
+// Route::get('/database', action: [StudentController::class, 'getStudent']);
