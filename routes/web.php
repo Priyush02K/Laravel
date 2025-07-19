@@ -19,6 +19,8 @@ use App\Http\Controllers\FromHandling;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserttpController;
+use App\Http\Controllers\NewStudentController;
+
 
 
 
@@ -127,3 +129,9 @@ Route::get('/database', action: [UserController::class, 'database']);
 
 //htpp API
 Route::get('userhttp', [UserttpController::class,'getuser']);
+
+
+//Eloquent Model
+Route::get('/students', [NewStudentController::class, 'index']);
+Route::get('/add-student', [NewStudentController::class, 'create']);
+Route::get('/query-builder', [NewStudentController::class, 'queryBuilderDemo']);
