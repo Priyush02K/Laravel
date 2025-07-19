@@ -135,3 +135,5 @@ Route::get('userhttp', [UserttpController::class,'getuser']);
 Route::get('/students', [NewStudentController::class, 'index']);
 Route::get('/add-student', [NewStudentController::class, 'create']);
 Route::get('/query-builder', [NewStudentController::class, 'queryBuilderDemo']);
+
+//
