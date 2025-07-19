@@ -20,6 +20,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserttpController;
 use App\Http\Controllers\NewStudentController;
+use App\Http\Controllers\RouteMethodController;
+
 
 
 
@@ -136,4 +138,13 @@ Route::get('/students', [NewStudentController::class, 'index']);
 Route::get('/add-student', [NewStudentController::class, 'create']);
 Route::get('/query-builder', [NewStudentController::class, 'queryBuilderDemo']);
 
-//
+//Route Method
+Route::get('/route-test', [RouteMethodController::class, 'index']);
+
+Route::get('/route/get', [RouteMethodController::class, 'getMethod']);
+Route::post('/route/post', [RouteMethodController::class, 'postMethod']);
+Route::put('/route/put', [RouteMethodController::class, 'putMethod']);
+Route::patch('/route/patch', [RouteMethodController::class, 'patchMethod']);
+Route::delete('/route/delete', [RouteMethodController::class, 'deleteMethod']);
+Route::match(['get', 'post'], '/route/match', [RouteMethodController::class, 'matchMethod']);
+Route::any('/route/any', [RouteMethodController::class, 'anyMethod']);
