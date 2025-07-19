@@ -21,6 +21,8 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserttpController;
 use App\Http\Controllers\NewStudentController;
 use App\Http\Controllers\RouteMethodController;
+use App\Http\Controllers\RequestExampleController;
+
 
 
 
@@ -148,3 +150,8 @@ Route::patch('/route/patch', [RouteMethodController::class, 'patchMethod']);
 Route::delete('/route/delete', [RouteMethodController::class, 'deleteMethod']);
 Route::match(['get', 'post'], '/route/match', [RouteMethodController::class, 'matchMethod']);
 Route::any('/route/any', [RouteMethodController::class, 'anyMethod']);
+
+
+//HTTP request Method
+Route::get('/request-example', [RequestExampleController::class, 'showForm']);
+Route::post('/request-example', [RequestExampleController::class, 'handleRequest']);
