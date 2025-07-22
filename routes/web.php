@@ -24,6 +24,8 @@ use App\Http\Controllers\RouteMethodController;
 use App\Http\Controllers\RequestExampleController;
 use App\Http\Controllers\SessionDemoController;
 use App\Http\Controllers\FlashController;
+use App\Http\Controllers\ImageController;
+
 
 
 
@@ -170,3 +172,10 @@ Route::get('/session/clear', [SessionDemoController::class, 'clear']);
 
 Route::get('/flash-form', [FlashController::class, 'showForm']);
 Route::post('/flash-form', [FlashController::class, 'handleForm']);
+
+
+//upload and display Image
+
+Route::get('/upload-image', [ImageController::class, 'create']);
+Route::post('/upload-image', [ImageController::class, 'store']);
+Route::get('/images/{filename}', [ImageController::class, 'show'])->name('images.show');
