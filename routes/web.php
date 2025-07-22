@@ -22,6 +22,8 @@ use App\Http\Controllers\UserttpController;
 use App\Http\Controllers\NewStudentController;
 use App\Http\Controllers\RouteMethodController;
 use App\Http\Controllers\RequestExampleController;
+use App\Http\Controllers\SessionDemoController;
+
 
 
 
@@ -155,3 +157,11 @@ Route::any('/route/any', [RouteMethodController::class, 'anyMethod']);
 //HTTP request Method
 Route::get('/request-example', [RequestExampleController::class, 'showForm']);
 Route::post('/request-example', [RequestExampleController::class, 'handleRequest']);
+
+
+//session 
+Route::get('/session-demo', [SessionDemoController::class, 'index']);
+Route::get('/session/set', [SessionDemoController::class, 'set']);
+Route::get('/session/get', [SessionDemoController::class, 'get']);
+Route::get('/session/remove', [SessionDemoController::class, 'remove']);
+Route::get('/session/clear', [SessionDemoController::class, 'clear']);
