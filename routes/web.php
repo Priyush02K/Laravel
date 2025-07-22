@@ -23,7 +23,7 @@ use App\Http\Controllers\NewStudentController;
 use App\Http\Controllers\RouteMethodController;
 use App\Http\Controllers\RequestExampleController;
 use App\Http\Controllers\SessionDemoController;
-
+use App\Http\Controllers\FlashController;
 
 
 
@@ -165,3 +165,8 @@ Route::get('/session/set', [SessionDemoController::class, 'set']);
 Route::get('/session/get', [SessionDemoController::class, 'get']);
 Route::get('/session/remove', [SessionDemoController::class, 'remove']);
 Route::get('/session/clear', [SessionDemoController::class, 'clear']);
+
+//flash-session
+
+Route::get('/flash-form', [FlashController::class, 'showForm']);
+Route::post('/flash-form', [FlashController::class, 'handleForm']);

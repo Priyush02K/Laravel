@@ -119,4 +119,11 @@
      <h2>API-HTTP </h2>
      <li><a href="userhttp">HTTP</a></li>
 
+
 <hr>
+     <h2>Eloquent Model </h2>
+     <li><a href="/students">Eloquent Model</a></li>
+
+<hr>
+     <h2>HTTP request Method </h2>
+     <li><a href="/request-example">HTTP request Method</a></li>
