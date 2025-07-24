@@ -127,3 +127,27 @@
 <hr>
      <h2>HTTP request Method </h2>
      <li><a href="/request-example">HTTP request Method</a></li>
+
+<hr>
+     <h2>Session </h2>
+     <li><a href="/session-demo">Session</a></li>
+
+<hr>
+     <h2>flash-form </h2>
+     <li><a href="/flash-form">flash-form</a></li>
+
+<hr>
+     <h2>Upload and Display Image </h2>
+     <li><a href="/upload-image">Upload and Display Image</a></li>
+
+
+<hr>
+     <h2>Laravel Localization</h2>
+      <a href="{{ url('lang/en') }}">English</a> | 
+    <a href="{{ url('lang/hi') }}">हिंदी</a>
+
+    <h2>{{ __('messages.welcome') }}</h2>
+    <button>{{ __('messages.login') }}</button>
+
+
+ <hr>

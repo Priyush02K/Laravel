@@ -25,7 +25,9 @@ use App\Http\Controllers\RequestExampleController;
 use App\Http\Controllers\SessionDemoController;
 use App\Http\Controllers\FlashController;
 use App\Http\Controllers\ImageController;
-
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\EmployeeController;
 
 
 
@@ -179,3 +181,20 @@ Route::post('/flash-form', [FlashController::class, 'handleForm']);
 Route::get('/upload-image', [ImageController::class, 'create']);
 Route::post('/upload-image', [ImageController::class, 'store']);
 Route::get('/images/{filename}', [ImageController::class, 'show'])->name('images.show');
+
+
+//Localization in Laravel 
+Route::get('lang/{locale}', function ($locale) {
+    Session::put('locale', $locale);
+    return redirect()->back();
+}); 
+
+
+
+//CRUD OPERATION
+Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
+Route::get('/employees/create', [EmployeeController::class, 'create'])->name('employees.create');
+Route::post('/employees/store', [EmployeeController::class, 'store'])->name('employees.store');
+Route::get('/employees/edit/{id}', [EmployeeController::class, 'edit'])->name('employees.edit');
+Route::post('/employees/update/{id}', [EmployeeController::class, 'update'])->name('employees.update');
+Route::get('/employees/delete/{id}', [EmployeeController::class, 'destroy'])->name('employees.destroy');
