@@ -151,3 +151,14 @@
 
 
  <hr>
+
+ <h2>CURED OPERATION </h2>
+     <li><a href="/employees">CURED</a></li>
+
+ 
+ <hr>
+
+ <h2>pagination </h2>
+     <li><a href="/customers">Pagination</a></li>
+
+ 

@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\EmployeeController;
 
+use App\Http\Controllers\CustomerController;
 
 
 
@@ -192,9 +193,9 @@ Route::get('lang/{locale}', function ($locale) {
 
 
 //CRUD OPERATION
-Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
-Route::get('/employees/create', [EmployeeController::class, 'create'])->name('employees.create');
-Route::post('/employees/store', [EmployeeController::class, 'store'])->name('employees.store');
-Route::get('/employees/edit/{id}', [EmployeeController::class, 'edit'])->name('employees.edit');
-Route::post('/employees/update/{id}', [EmployeeController::class, 'update'])->name('employees.update');
-Route::get('/employees/delete/{id}', [EmployeeController::class, 'destroy'])->name('employees.destroy');
+Route::resource('employees', EmployeeController::class);
+
+
+//pagination
+
+Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
