@@ -1,6 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LARAVEL</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+</head>
+<body>
+
 <h1 style="text-align: center;">Hello Laravel</h1>
-
-
 <hr>
 <h2>Routing </h2>
 <a href="/">welcome</a>;
@@ -158,7 +165,39 @@
  
  <hr>
 
- <h2>pagination </h2>
+ <h2>Pagination </h2>
      <li><a href="/customers">Pagination</a></li>
 
- 
+ <hr>
+ <h2 class="title">Laravel CSS & JS</h2>
+<hr>
+
+
+ <h2>upload img database </h2>
+     <li><a href="/products">Upload Img</a></li>
+
+
+<hr>
+ <h2>component </h2>
+     <li><a href="/homeNew">Component</a></li>
+
+
+<hr>
+ <h2>Inheritance </h2>
+     <li><a href="/Inheritance">Inheritance</a></li>
+
+
+     <script src="{{ asset('js/script.js') }}"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

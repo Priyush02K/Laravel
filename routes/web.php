@@ -30,8 +30,7 @@ use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\EmployeeController;
 
 use App\Http\Controllers\CustomerController;
-
-
+use App\Http\Controllers\ProductController;
 
 
 
@@ -199,3 +198,22 @@ Route::resource('employees', EmployeeController::class);
 //pagination
 
 Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
+
+//upload img database
+
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+
+
+//component reusable
+
+Route::get('homeNew', function () {
+    return view('homeNew');
+});
+
+
+
+Route::get('/Inheritance', function () {
+    return view('pages.home');
+});

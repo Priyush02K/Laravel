@@ -1,0 +1,10 @@
+body {
+    background-color: #f4f4f4;
+}
+.title {
+    color: #007bff;
+    /* text-align: center; */
+}
+header, footer { background: #f8f8f8; padding: 10px; text-align: center; }
+nav a { margin: 0 10px; text-decoration: none; color: #333; }
+main { padding: 20px; }
