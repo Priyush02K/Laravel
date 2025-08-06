@@ -186,6 +186,26 @@
  <h2>Inheritance </h2>
      <li><a href="/Inheritance">Inheritance</a></li>
 
+<hr>
+
+
+ <h2>Accessor </h2>
+     <li><a href="/accessor-test">Inheritance</a></li>
+<hr>
+
+
+ <h2>Mutator /h2>
+     <li><a href="/mutator-test">Inheritance</a></li>
+<hr>
+
+
+
+
+
+
+
+
+
 
      <script src="{{ asset('js/script.js') }}"></script>
 

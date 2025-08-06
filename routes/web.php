@@ -32,6 +32,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
 
+use App\Models\Student;
 
 
 
@@ -216,4 +217,26 @@ Route::get('homeNew', function () {
 
 Route::get('/Inheritance', function () {
     return view('pages.home');
+});
+
+
+//accessor
+Route::get('/accessor-test', function () {
+    // Insert a student (run only once)
+    // Student::create(['name' => 'priyush']);
+
+    $student = Student::first();
+
+    return "Student Name (with accessor): " . $student->name;
+    });
+
+    //mutator
+    Route::get('/mutator-test', function () {
+    // Create new student
+    // Student::create(['name' => 'pRIYUSH khOBRAGADE']);
+
+    // Get latest student
+    $student = Student::latest()->first();
+
+    return "Stored Student Name (Mutated): " . $student->name;
 });
