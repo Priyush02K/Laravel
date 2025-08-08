@@ -33,6 +33,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
 
 use App\Models\Student;
+use App\Http\Controllers\RelationController;
 
 
 
@@ -240,3 +241,17 @@ Route::get('/accessor-test', function () {
 
     return "Stored Student Name (Mutated): " . $student->name;
 });
+
+
+
+//RelationsShip Database
+
+
+Route::get('/one-to-one', [RelationController::class, 'oneToOne']);
+Route::get('/one-to-many', [RelationController::class, 'oneToMany']);
+Route::get('/many-to-many', [RelationController::class, 'manyToMany']);
+Route::get('/has-many-through', [RelationController::class, 'hasManyThrough']);
+Route::get('/polymorphic', [RelationController::class, 'polymorphic']);
+
+
+

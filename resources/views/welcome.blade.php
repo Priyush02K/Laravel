@@ -190,14 +190,17 @@
 
 
  <h2>Accessor </h2>
-     <li><a href="/accessor-test">Inheritance</a></li>
+     <li><a href="/accessor-test">Accessor</a></li>
 <hr>
 
 
- <h2>Mutator /h2>
-     <li><a href="/mutator-test">Inheritance</a></li>
+ <h2>Mutator </h2>
+     <li><a href="/mutator-test">Mutator</a></li>
 <hr>
 
+<h2>RelationsShip Database</h2>
+     <li><a href="">RelationsShip</a></li>
+<hr>
 
 
 
