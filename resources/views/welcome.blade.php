@@ -203,9 +203,14 @@
 <hr>
 
 
+<h2>Email </h2>
+     <li><a href="/send-mail">RelationsShip</a></li>
+<hr>
 
 
-
+<h2>USE inline blade </h2>
+     <li><a href="/inline-blade">RelationsShip</a></li>
+<hr>
 
 
 

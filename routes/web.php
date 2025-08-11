@@ -36,6 +36,17 @@ use App\Models\Student;
 use App\Http\Controllers\RelationController;
 
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestMail;
+
+
+
+
+
+
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -255,3 +266,36 @@ Route::get('/polymorphic', [RelationController::class, 'polymorphic']);
 
 
 
+//Email
+
+Route::get('/send-mail', function () {
+    $details = [
+        'title' => 'Mail from Laravel App',
+        'body'  => 'This is for testing email using SMTP in Laravel.'
+    ];
+
+    Mail::to('recipient@example.com')->send(new TestMail($details));
+
+    return "Email Sent!";
+});
+
+
+//use inline blade
+use Illuminate\Support\Facades\Blade;
+
+Route::get('/inline-blade', function () {
+    $name = "Priyush";
+    $items = ['Laptop', 'Mobile', 'Tablet'];
+
+    $html = Blade::render('
+        <h1>Hello, {{ $name }}</h1>
+        <p>Your items list:</p>
+        <ul>
+            @foreach($items as $item)
+                <li>{{ $item }}</li>
+            @endforeach
+        </ul>
+    ', compact('name', 'items'));
+
+    return $html;
+});
