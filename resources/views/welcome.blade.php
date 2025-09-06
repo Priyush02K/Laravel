@@ -212,8 +212,14 @@
      <li><a href="/inline-blade">RelationsShip</a></li>
 <hr>
 
+<h2>Employees API</h2>
+     <li><a href="/api/employees"> API</a></li>
+<hr>
 
 
+<h2>GET DATA API</h2>
+     <li><a href="/api/apiproducts"> GET API + TEST </a></li>
+<hr>
 
      <script src="{{ asset('js/script.js') }}"></script>
 

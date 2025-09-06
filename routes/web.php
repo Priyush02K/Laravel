@@ -299,3 +299,6 @@ Route::get('/inline-blade', function () {
 
     return $html;
 });
+
+
+
