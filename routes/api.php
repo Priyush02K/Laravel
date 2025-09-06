@@ -50,7 +50,16 @@ Route::get('/apiproducts', [APIProductController::class, 'index']);
 Route::get('/apiproducts/search/{name}', [APIProductController::class, 'search']);
 
 
+//POST
+Route::post('/apiproducts', [APIProductController::class, 'store']);
 
 
+//update
+Route::post('/apiproducts/update/{id}', [APIProductController::class, 'update']);
+
+//delete
+Route::delete('/apiproducts/{id}', [APIProductController::class, 'destroy']);
 
 
+//search 
+Route::get('/apiproducts/search/{key}', [APIProductController::class, 'apisearch']);
