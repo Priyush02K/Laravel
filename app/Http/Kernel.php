@@ -49,6 +49,8 @@ class Kernel extends HttpKernel
         ],
     ];
 
+    
+
     /**
      * The application's middleware aliases.
      *
